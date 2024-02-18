@@ -40,6 +40,11 @@ body{
 .btn-primary{
     color: #fff;
     background: #16a083;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover{
+    background: rgb(21, 153, 98);
 }
 /* -------------navbar styling --------------*/
 
@@ -525,5 +530,66 @@ color: #ff9529;
     .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
         transform: rotate(-45deg);
     } 
-     
+
+    /*------Food category----------*/
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .food-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    .food-type{
+        box-shadow: 5px 5px 10px 0px;
+    }
+
+    .img-container
+    {
+        margin: 0;
+    }
+}
+
+/*--------media qyuery for 500px------------------------------*/
+@media(max-width:500px){
+    html{
+        font-size: 50%;
+    }
+    .testimonial-container{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .food-menu-item{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .food-menu-container img{
+        margin: auto;
+    }
+
+    .form-container{
+        width: 90%;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-image{
+        width: 90%;
+        margin: 3rem auto;
+    }
+}
+
+/*--------media query for landscape mode------------------------------*/
+
+@media(orientation:landscape) and (max-height:500px){
+    .showcase-area{
+        border: 6px solid green;
+        height: 50vmax;
+    }
 }
